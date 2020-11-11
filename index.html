@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Rolling ball</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<svg width="100%" height="555">
+  <defs>
+    <pattern id="bg" width="180" height="555" patternUnits="userSpaceOnUse">
+	    <image width="180" height="555" xlink:href="https://assets.codepen.io/721952/redwood.jpg" />
+	  </pattern>
+    
+    <mask id="c">
+      <circle cx="67" cy="61" r="34" fill="#fff" />
+    </mask>
+    
+    <g id="ball">      
+      <g mask="url(#c)">
+        <rect fill="#fff" width="120" height="120" />
+        <rect class="color" fill="#00f" width="60" height="120" />
+      </g>
+    </g>
+    
+    <image id="shading" width="120" height="120" xlink:href="https://assets.codepen.io/721952/marbleLighting2_1.png" />
+    
+  </defs>
+  <rect class="background" x="0" y="0" width="100%" height="555" fill="url(#bg)" />
+  
+  
+  <path class="pathLine" stroke="none" fill="none" d="M361,60c0,0-41,0.5-41,52s0,288,0,343c0,52.5-49,52-49,52s-44,0.5-44-52c0-48,0-292,0-343s-44-52-44-52
+	s-44,0.5-44,52s0,288,0,343c0,52.5-49,52-49,52s-44,0.5-44-52c0-48,0-292,0-343S0,60,0,60"/>
+  
+  <use class="b1 b1_color" href="#ball"/>
+  <use class="b1 b1_shade" href="#shading"/>  
+</svg>
+<script  src="js/index.js"></script>
+</body>
+</html>
